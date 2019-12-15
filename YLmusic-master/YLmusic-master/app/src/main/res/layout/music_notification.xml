@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/nf_album"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:id="@+id/nf_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/nf_pause"
+            android:layout_toRightOf="@+id/nf_album"
+            android:text="自然而然"
+            android:layout_marginTop="5dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/nf_artist"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nf_title"
+            android:layout_toLeftOf="@id/nf_pause"
+            android:layout_toRightOf="@+id/nf_album"
+            android:text="廖俊涛"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/nf_pause"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70dp"
+            android:src="@drawable/nf_pause" />
+
+        <ImageView
+            android:id="@+id/nf_next"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nf_next" />
+
+
+    </RelativeLayout>
+</LinearLayout>

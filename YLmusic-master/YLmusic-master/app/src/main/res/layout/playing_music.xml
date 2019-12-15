@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ylmusic.Playing_music">
+
+    <ImageView
+        android:id="@+id/m_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        />
+    <RelativeLayout
+        android:id="@+id/m_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+       <ImageView
+           android:id="@+id/close_music"
+           android:layout_height="50dp"
+           android:layout_width="50dp"
+           android:layout_alignParentLeft="true"
+           android:layout_margin="10dp"
+           android:src="@drawable/close"
+           />
+        <ImageView
+            android:id="@+id/getSongs"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/unget" />
+        <TextView
+            android:id="@+id/music_name"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_toRightOf="@+id/close_music"
+            android:text="自然而然"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:id="@+id/music_artist"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_below="@+id/music_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/close_music"
+            android:text="廖俊涛"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_above="@+id/m_linlayout"
+        android:layout_below="@+id/m_relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/disc"
+            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/disc"
+            />
+        <ImageView
+            android:id="@+id/needle"
+            android:layout_width="150dp"
+            android:layout_height="159dp"
+            android:layout_marginLeft="132dp"
+            android:src="@drawable/needle" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/m_linlayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/m_current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/m_total"
+                android:layout_toRightOf="@+id/m_current"
+                >
+                 <SeekBar
+                android:id="@+id/m_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/m_total"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:text="05:20"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/m_inturn"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/in_turn" />
+
+                <ImageView
+                    android:id="@+id/m_before"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@+id/m_pause"
+                    android:src="@drawable/m_before" />
+                <ImageView
+                    android:id="@+id/m_pause"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/m_pause" />
+
+                <ImageView
+                    android:id="@+id/m_next"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@id/m_pause"
+                    android:src="@drawable/m_next" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
